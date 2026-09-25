@@ -1,0 +1,203 @@
+/* TEMA VINTAGE WARM */
+.vintage-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #4A2218;
+  border: 3px double #F1D9A9;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: #F1D9A9;
+}
+
+/* HEADER & NAVIGASI */
+.vintage-header {
+  text-align: center;
+  border-bottom: 2px dashed #D4B27C;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  color: #F9E8C9;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.vintage-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.vintage-btn {
+  background-color: #5C2C20;
+  color: #F1D9A9;
+  border: 1px solid #D4B27C;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.vintage-btn:hover, .vintage-btn.active {
+  background-color: #8C4430;
+  color: #FFFFFF;
+  border-color: #FFF;
+  box-shadow: 0 0 8px rgba(241, 217, 169, 0.6);
+}
+
+/* KONTEN UTAMA & KARTU */
+.vintage-main {
+  min-height: 350px;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.hero-section h2 {
+  font-size: 1.8rem;
+  color: #F9E8C9;
+  margin-bottom: 8px;
+}
+
+.intro-text {
+  font-style: italic;
+  color: #D4B27C;
+  font-size: 1.1rem;
+}
+
+.card-grid, .info-grid, .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.vintage-card {
+  background-color: #5C2C20;
+  border: 1px solid #D4B27C;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.vintage-card h3 {
+  color: #F9E8C9;
+  margin-top: 0;
+  border-bottom: 1px dashed #D4B27C;
+  padding-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.motto-box {
+  background-color: #38150D;
+  border-left: 4px solid #F1D9A9;
+  padding: 15px;
+  margin-top: 25px;
+  border-radius: 0 8px 8px 0;
+}
+
+.section-desc {
+  text-align: center;
+  color: #D4B27C;
+  margin-bottom: 20px;
+}
+
+.placeholder-img {
+  background-color: #38150D;
+  border: 1px dashed #D4B27C;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D4B27C;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.social-section {
+  text-align: center;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  text-decoration: none;
+  display: inline-block;
+  align-items: center;
+  gap: 8px;
+}
+
+/* FOTO PROFIL BIOGRAFI */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.profile-img {
+  width: 130px;            
+  height: 130px;           
+  object-fit: cover;       
+  border-radius: 8px;      
+  border: 2px solid #D4B27C; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;          
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* GAYA FOTO GALERI */
+.gallery-img {
+  width: 100%;
+  height: 180px;            /* Sesuaikan tinggi foto yang diinginkan */
+  object-fit: cover;        /* Memastikan gambar terpotong rapi tanpa gepeng */
+  border: 1px dashed #D4B27C; /* Bingkai garis putus-putus warna vintage */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* FOOTER */
+.vintage-footer {
+  text-align: center;
+  border-top: 2px dashed #D4B27C;
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 0.85rem;
+  color: #D4B27C;
+}
+
+/* ANIMASI HALUS */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
