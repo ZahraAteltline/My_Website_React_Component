@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom'; // <-- Import Routes dan Route
 import './App.css';
 
-// Import komponen-komponen yang sudah dibuat
+// Import komponen
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Beranda from './components/Beranda';
@@ -10,22 +11,22 @@ import Gallery from './components/Gallery';
 import Social from './components/Social';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('beranda');
-
   return (
     <div className="vintage-container">
-      {/* HEADER & NAVIGASI */}
-      <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+      {/* Header akan selalu tampil di semua halaman */}
+      <Header />
 
-      {/* KONTEN UTAMA */}
+      {/* KONTEN UTAMA DENGAN ROUTER */}
       <main className="vintage-main">
-        {activeTab === 'beranda' && <Beranda />}
-        {activeTab === 'about' && <About />}
-        {activeTab === 'gallery' && <Gallery />}
-        {activeTab === 'social' && <Social />}
+        <Routes>
+          <Route path="/" element={<Beranda />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/social" element={<Social />} />
+        </Routes>
       </main>
 
-      {/* FOOTER */}
+      {/* Footer akan selalu tampil di semua halaman */}
       <Footer />
     </div>
   );

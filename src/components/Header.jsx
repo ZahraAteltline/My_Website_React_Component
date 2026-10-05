@@ -1,34 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // <-- Import Link
 
-function Header({ activeTab, setActiveTab }) {
+function Header() {
   return (
     <header className="vintage-header">
       <h1 className="logo">✦ My Personal Space ✦</h1>
       <nav className="vintage-nav">
-        <button 
-          className={`vintage-btn ${activeTab === 'beranda' ? 'active' : ''}`}
-          onClick={() => setActiveTab('beranda')}
-        >
+        {/* Gunakan 'to' untuk menentukan URL tujuannya */}
+        <Link to="/" className="vintage-btn">
           Beranda
-        </button>
-        <button 
-          className={`vintage-btn ${activeTab === 'about' ? 'active' : ''}`}
-          onClick={() => setActiveTab('about')}
-        >
+        </Link>
+        <Link to="/about" className="vintage-btn">
           About Me
-        </button>
-        <button 
-          className={`vintage-btn ${activeTab === 'gallery' ? 'active' : ''}`}
-          onClick={() => setActiveTab('gallery')}
-        >
+        </Link>
+        <Link to="/gallery" className="vintage-btn">
           Gallery
-        </button>
-        <button 
-          className={`vintage-btn ${activeTab === 'social' ? 'active' : ''}`}
-          onClick={() => setActiveTab('social')}
-        >
+        </Link>
+        <Link to="/social" className="vintage-btn">
           Social
-        </button>
+        </Link>
       </nav>
     </header>
   );
